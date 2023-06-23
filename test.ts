@@ -80,3 +80,28 @@ user = {
     id: '1',
     name: 'John'
 } */ // Error: Type 'string' is not assignable to type 'number'.
+
+
+// Type Assertion
+let cid: any = 1;
+let customerId = <number>cid
+// or let customerId = cid as number
+customerId = 5 // Correct
+// customerId = true Error: Type 'boolean' is not assignable to type 'number'.
+
+
+// Functions
+function addNum(x: number, y: number): number {
+    return x + y;
+}
+
+console.log(addNum(1, 3)) // 4
+// console.log(addNum('Add', 4)) Error: Argument of type 'string' is not assignable to parameter of type 'number'.
+
+// Void
+function log(message: string | number): void {
+    console.log(message)
+}
+
+log('Success') // Correct
+// log(true) Error: Argument of type 'boolean' is not assignable to parameter of type 'string | number'.
