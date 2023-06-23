@@ -44,3 +44,10 @@ employee = [
     [true, 'John'],
     ['Brad', 1]
 ] // Error: Type 'boolean' is not assignable to type 'number'.
+
+
+// Union
+let pid: string | number;
+pid = 22; // Correct
+pid = 'John' // Correct
+pid = true // Error: Type 'boolean' is not assignable to type 'string | number'.
