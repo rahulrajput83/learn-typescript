@@ -78,4 +78,9 @@ function log(message) {
     console.log(message);
 }
 log('Success'); // Correct
-// log(true) Error: Argument of type 'boolean' is not assignable to parameter of type 'string | number'.
+let user1 = {
+    id: 1,
+    name: 'John'
+}; // Correct
+let add = (x, y) => x + y;
+let sub = (x, y) => x - y;

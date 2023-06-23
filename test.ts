@@ -105,3 +105,28 @@ function log(message: string | number): void {
 
 log('Success') // Correct
 // log(true) Error: Argument of type 'boolean' is not assignable to parameter of type 'string | number'.
+
+
+// Interfaces
+interface UserInterface {
+    id: number,
+    name: string,
+    age?: number // Optional
+}
+
+let user1: UserInterface = {
+    id: 1,
+    name: 'John'
+} // Correct
+
+/* let user2: UserInterface = {
+    id: 'One',
+    name: 'Jill'
+} Error: Type 'string' is not assignable to type 'number'. */
+
+interface MathFunc{
+    (x: number, y: number): number
+}
+
+let add: MathFunc = (x: number, y: number): number => x + y;
+let sub: MathFunc = (x: number, y: number): number => x - y;
