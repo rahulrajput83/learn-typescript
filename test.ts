@@ -23,3 +23,24 @@ ids = [1, 2, 5, true] // Error: Type 'boolean' is not assignable to type 'number
 
 let Ids: any[];
 Ids = [1, 2, 3, true, 'String'] // Correct
+
+
+// Tuple
+let person: [string, number, boolean];
+person = ['John', 1, true] // Correct
+person = [1, 'John', true] // Error: Type 'number' is not assignable to type 'string'.
+person = [false, 2, 'John'] // Error: Type 'boolean' is not assignable to type 'string'.
+
+
+// Tuple Array
+let employee: [number, string][]
+employee = [
+    [1, 'John'],
+    [2, 'Brad'],
+    [3, 'Jill']
+] // Correct
+
+employee = [
+    [true, 'John'],
+    ['Brad', 1]
+] // Error: Type 'boolean' is not assignable to type 'number'.
